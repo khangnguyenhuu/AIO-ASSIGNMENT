@@ -126,7 +126,7 @@ if __name__ == "__main__":
     assert queue1.is_full() == False
     queue1.enqueue(2)
     print('output cau 11')
-    print(queue1.enqueue(2))
+    print(queue1.is_full())
     print('='*20)
 
     '''
