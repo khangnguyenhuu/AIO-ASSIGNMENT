@@ -13,7 +13,8 @@ if __name__ == "__main__":
     data = torch.Tensor([1, 2, 3])
     softmax_function = nn.Softmax(dim=0)
     output = softmax_function(data)
-    assert round(output[0].item(), 2) == 0.09
+    compare_value = 0.09
+    assert round(output[0].item(), 2) == compare_value
     print("output cau 1", output)
     print('='*20)
     '''
@@ -22,7 +23,8 @@ if __name__ == "__main__":
     data = torch.Tensor([5, 2, 4])
     my_softmax = MySoftmax()
     output = my_softmax(data)
-    assert round(output[-1].item(), 2) == 0.26
+    compare_value = 0.26
+    assert round(output[-1].item(), 2) == compare_value
     print("output cau 2", output)
     print('='*20)
     '''
@@ -31,7 +33,8 @@ if __name__ == "__main__":
     data = torch.Tensor([1, 2, 300000000])
     my_softmax = MySoftmax()
     output = my_softmax(data)
-    assert round(output[0].item(), 2) == 0.0
+    compare_value = 0.0
+    assert round(output[0].item(), 2) == compare_value
     print("output cau 3", output)
     print('='*20)
     '''
@@ -40,7 +43,8 @@ if __name__ == "__main__":
     data = torch.Tensor([1, 2, 3])
     softmax_stable = SoftmaxStable()
     output = softmax_stable(data)
-    assert round(output[-1].item(), 2) == 0.67
+    compare_value = 0.67
+    assert round(output[-1].item(), 2) == compare_value
     print("output cau 4", output)
     print('='*20)
 
